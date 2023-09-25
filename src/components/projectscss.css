@@ -1,0 +1,28 @@
+* {
+    align-items: center;
+    
+}
+
+.projectview {
+    display: inline-block;
+    list-style-type: none;
+    margin-right: 20px; /* Reduce the margin between list items */
+    margin-top: 50px;
+    max-width: 300px;
+    vertical-align: top; /* Align the list items to the top */
+}
+
+.prosjektbilde {
+    width: 100px;
+    height: auto
+}
+
+a {
+    text-decoration: none;
+    color: red;
+}
+
+.projectview li {
+    display: inline-block; /* Display list items inline */
+    vertical-align: top; /* Align list items to the top */
+}
