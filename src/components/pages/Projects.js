@@ -41,11 +41,13 @@ function DisplayProjects() {
 }
 
 export default function Projects() {
+  const more = "There is more coming eventually.";
+
   return (
     <>
       <div>
         <DisplayProjects />
-        <p> Mer kommer!</p>
+        <p className="fremside"> {more} </p>
       </div>
     </>
   );

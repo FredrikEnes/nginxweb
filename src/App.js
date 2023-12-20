@@ -4,19 +4,16 @@ import About from "./components/pages/About";
 import CV from "./components/pages/CV";
 import Navbar from "./components/Navbar";
 import Projects from "./components/pages/Projects";
-import ParticlesBackground from "./components/ParticlesBackground";
 import { Route, Routes } from "react-router-dom";
-import Logos from "./components/Logos";
 
 function App() {
   return (
     <>
-      <div className="Navigation">
-        <Navbar />
-        <ParticlesBackground />
-      </div>
-
       <div className="App">
+        <div className="Navigation">
+          <Navbar />
+        </div>
+
         <div className="container">
           <Routes>
             <Route path="/" element={<Forside />} />
@@ -25,7 +22,6 @@ function App() {
             <Route path="/projects" element={<Projects />} />
           </Routes>
         </div>
-        <Logos />
       </div>
     </>
   );

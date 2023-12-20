@@ -14,7 +14,7 @@ function Resume() {
   const programmingSkills = "Java, Python og SQL";
 
   return (
-    <div>
+    <div className="fremside">
       <h2>Utdanning</h2>
       <ul>
         {education.map((item, index) => (
