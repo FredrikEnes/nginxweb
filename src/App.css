@@ -71,15 +71,29 @@ body {
 }
 
 .fremside {
-  margin-top: 100px;
+  text-align: center; /* Center the content horizontally */
 }
 
-.fremside li {
-  margin-top: 10px;
+.fremside h1 {
+  margin-top: 75px;
 }
 
 .fremside h2 {
   margin-top: 50px;
+}
+
+.fremside h3 {
+  margin-top: 35px;
+  width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fremside p {
+  margin-bottom: 20px;
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .projectview {

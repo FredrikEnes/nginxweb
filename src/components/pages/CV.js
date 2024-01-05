@@ -1,31 +1,70 @@
+import Koffert from "./images/suitcase.png";
+
 function Resume() {
-  const education = [
-    "August 2021 – nå: Høgskulen på Vestlandet, Dataingeniør.",
-    "August 2020 – Juni 2021: Høgskulen på Vestlandet, Forkurs for ingeniør- og sivilingeniørutdanning.",
+  const educationData = [
+    {
+      period: "August 2021 – nå",
+      institution: "Høgskulen på Vestlandet",
+      program: "Dataingeniør, bachelor",
+      info: "I studieløpet har jeg hatt hovedfokus på Java-programmering, dykket inn i Python gjennom et maskinlæringsemne, utforsket Haskell gjennom funksjonell programmering, og lært SQL fra et emne. Bevisst variasjon i fagvalg har gitt meg bred kompetanse. Jeg har også fått kunnskap i Java rammeverket Spring Boot. Spesialisering i Programutvikling- og arkitektur.",
+    },
+    {
+      period: "Juni 2018 – Juni 2020",
+      institution: "Universitet i Bergen",
+      program: "IKT-servicefaget , fagbrev",
+      info: "To års læretid ved Universitetet i Bergen ble fullført med bestått fagbrev. Hovedfokus lå på brukerstøtte for 4000 ansatte, med vekt på følging av læreplanen som omfattet klient- og serverdrift.",
+    },
   ];
 
   const workExperience = [
-    "August 2022 – nå: Studentassistent hos Høgskulen på Vestlandet.",
-    "Juni 2023 - Juli 2023: Servicetekniker hos Bergen Kommune.",
-    "Juni 2022 - August 2022: Instruktør hos A2G Kompetanse.",
-    "Juli 2018 – Juli 2020: IKT-lærling hos Universitetet i Bergen.",
+    {
+      period: "August 2022 – nå",
+      workplace: "Høgskulen på Vestlandet",
+      typeofwork: "Studentassistent",
+      info: "Studentassistent stilling som innebærer å gi brukerstøtte til medstudenter på deres tekniske spørsmål. Studentassistent i faget DAT110 våren 2024 som innebærer å rette obligatoriske innleveringer og å være til hjelp under laboratorieøvelser.",
+    },
+    {
+      period: "Juni 2023 - Juli 2023",
+      workplace: "Bergen Kommune",
+      typeofwork: "Servicetekniker",
+      info: "Sommerjobb som servicetekniker. Arbeidsoppgavene besto av montering, demontering og vedlikehold av hjelpemidler i hjemmebaserte tjenester.",
+    },
+    {
+      period: "Juni 2022 - August 2022",
+      workplace: "A2G Kompetanse",
+      typeofwork: "Instruktør",
+      info: "Sommerjobb som instruktør hos arbeidsavklaringstiltaket til A2G. Bisto deltakere gjennom forskjellige nettbaserte kurs.",
+    },
+    {
+      period: "Juli 2018 – Juli 2020",
+      workplace: "Universitetet i Bergen",
+      typeofwork: "IKT-lærling",
+      info: "Jeg fikk jobbe på IT-avdelingen til UiB. Lærte masse teknisk og menneskelig gjennom om det å drive brukerstøtte til ansatte på UiB.",
+    },
   ];
 
   const programmingSkills = "Java, Python og SQL";
 
   return (
     <div className="fremside">
+      <img className="bilde" src={Koffert} alt="profil" />
       <h2>Utdanning</h2>
       <ul>
-        {education.map((item, index) => (
-          <li key={index}>{item}</li>
+        {educationData.map((item, index) => (
+          <li key={index}>
+            <h3>{`${item.period}: ${item.institution}, ${item.program}`}</h3>
+            <p>{item.info}</p>
+          </li>
         ))}
       </ul>
 
       <h2>Arbeidserfaring</h2>
       <ul>
         {workExperience.map((item, index) => (
-          <li key={index}>{item}</li>
+          <li key={index}>
+            <h3>{`${item.period}: ${item.workplace}, ${item.typeofwork} `}</h3>
+            <p>{item.info}</p>
+          </li>
         ))}
       </ul>
 
