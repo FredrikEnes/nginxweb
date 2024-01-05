@@ -1,12 +1,22 @@
 import WEB from "./images/web.png";
+import SpringBoot from "./images/spring-boot-logo.png";
 
 function DisplayProjects() {
   const data = [
     {
       Bilde: WEB,
       Tittel: "This website",
-      Beskrivelse: "This is this page",
+      Beskrivelse:
+        "Denne nettsiden, har brukt React for å lage den, samt min egen css. Tenker senere å koble den opp til en MySQL database. ",
       Lenke: "https://github.com/h594754/nginxweb",
+    },
+
+    {
+      Bilde: SpringBoot,
+      Tittel: "DAT108 oblig",
+      Beskrivelse:
+        "En av de obligatoriske innleveringene vi hadde i faget DAT108, her er det brukt database oppkobling, hashing av passord samt visning av informasjon gjennom jstl-biblioteket.",
+      Lenke: "https://github.com/h594754/DAT108_Oblig4",
     },
   ];
 
@@ -34,12 +44,12 @@ function DisplayProjects() {
 }
 
 export default function Projects() {
-  const more = "This section is coming eventually.";
+  const more = "More coming eventually.";
 
   return (
     <>
       <div>
-        {/* <DisplayProjects /> */}
+        <DisplayProjects />
         <p className="projectview"> {more} </p>
       </div>
     </>
