@@ -47,7 +47,7 @@ function Resume() {
 
   return (
     <div className="fremside">
-      <img className="bilde" src={Koffert} alt="profil" />
+      <img className="koffertbilde" src={Koffert} alt="profil" />
       <h2>Utdanning</h2>
       <ul>
         {educationData.map((item, index) => (
@@ -58,7 +58,7 @@ function Resume() {
         ))}
       </ul>
 
-      <h2>Arbeidserfaring</h2>
+      <h2 className="arbeid">Arbeidserfaring</h2>
       <ul>
         {workExperience.map((item, index) => (
           <li key={index}>
@@ -68,7 +68,7 @@ function Resume() {
         ))}
       </ul>
 
-      <h2>Programmeringskompetanse</h2>
+      <h2 className="arbeid">Programmeringskompetanse</h2>
       <p>{programmingSkills}</p>
     </div>
   );

@@ -19,7 +19,7 @@ export default function Forside() {
       <div>
         <div className="fremside">
           <h1>Hallo verden</h1>
-          <img className="bilde" src={Profil} alt="profil" />
+          <img className="fremsidebilde" src={Profil} alt="profil" />
           <br />
           <br />
           <p>

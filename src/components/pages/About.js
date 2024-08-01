@@ -10,7 +10,7 @@ export default function About() {
     <div className="about">
       <div className="text-box">
         <h1>{hei}</h1>
-        <img className="bilde" src={RBK} alt="profil" />
+        <img className="fremsidebilde" src={RBK} alt="profil" />
         <p> {tekstommeg} </p>
       </div>
     </div>

@@ -14,7 +14,15 @@ body {
   margin: 25px; /* Adjust margins as needed */
 }
 
-.bilde {
+.koffertbilde {
+  border-radius: 50%;
+  height: 150px;
+  width: auto;
+  margin-top: 30px;
+
+}
+
+.fremsidebilde {
   border-radius: 50%;
   height: 250px;
   width: auto;
@@ -75,15 +83,12 @@ body {
 }
 
 .fremside h1 {
-  margin-top: 75px;
-}
-
-.fremside h2 {
   margin-top: 50px;
 }
 
+
 .fremside h3 {
-  margin-top: 35px;
+  margin-top: 5px;
   width: 700px;
   margin-left: auto;
   margin-right: auto;
@@ -140,6 +145,11 @@ a {
   color: white;
 }
 
+
 .fremside ul {
   list-style-type: none;
+}
+
+.arbeid {
+  margin-top: 50px;
 }
