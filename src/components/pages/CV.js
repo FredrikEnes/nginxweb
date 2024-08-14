@@ -18,7 +18,13 @@ function Resume() {
 
   const workExperience = [
     {
-      period: "August 2022 – nå",
+      period: "Juni 2024 – August 2024",
+      workplace: "Omega 365",
+      typeofwork: "Summer Intern",
+      info: "Jobbet hos Omega hvor vi fikk innføring i SQL Server og andre systemer. Laget også et eget prosjekt som innebærte å kartlegge fiskeplasser. ",
+    },
+    {
+      period: "August 2022 – Juni 2024",
       workplace: "Høgskulen på Vestlandet",
       typeofwork: "Studentassistent",
       info: "Studentassistent stilling som innebærer å gi brukerstøtte til medstudenter på deres tekniske spørsmål. Studentassistent i faget DAT110 våren 2024 som innebærer å rette obligatoriske innleveringer og å være til hjelp under laboratorieøvelser.",

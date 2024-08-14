@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import Logos from "../Logos";
 import Profil from "./images/meg.jpg";
 
@@ -23,8 +22,8 @@ export default function Forside() {
           <br />
           <br />
           <p>
-            Mitt navn er Fredrik Enes og jeg studerer Dataingeniør ved Høgskulen
-            på Vestlandet
+            Mitt navn er Fredrik Enes. Jeg har studert Dataingeniør på Høgskulen
+            på Vestlandet og har fagbrev i IKT-servicefaget.
           </p>
           {/*  <p> Server sier {info.navn} </p> */}
           <p> Ta gjerne kontakt via en av logoene under </p>
