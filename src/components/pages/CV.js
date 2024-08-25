@@ -3,10 +3,16 @@ import Koffert from "./images/suitcase.png";
 function Resume() {
   const educationData = [
     {
+      period: "August 2024 – nå",
+      institution: "Universitetet i Bergen",
+      program: "Software Engineering, master",
+      info: "",
+    },
+    {
       period: "August 2021 – nå",
       institution: "Høgskulen på Vestlandet",
       program: "Dataingeniør, bachelor",
-      info: "I studieløpet har jeg hatt hovedfokus på Java-programmering, dykket inn i Python gjennom et maskinlæringsemne, utforsket Haskell gjennom funksjonell programmering, og lært SQL fra et emne. Bevisst variasjon i fagvalg har gitt meg bred kompetanse. Jeg har også fått kunnskap i Java rammeverket Spring Boot. Spesialisering i Programutvikling- og arkitektur.",
+      info: "Bacheloroppgave: Library of Things. Spesialisering i Programutvikling- og arkitektur. Vinner av Grasrotprisen på HVL EXPO 2024.",
     },
     {
       period: "Juni 2018 – Juni 2020",
@@ -21,7 +27,7 @@ function Resume() {
       period: "Juni 2024 – August 2024",
       workplace: "Omega 365",
       typeofwork: "Summer Intern",
-      info: "Jobbet hos Omega hvor vi fikk innføring i SQL Server og andre systemer. Laget også et eget prosjekt som innebærte å kartlegge fiskeplasser. ",
+      info: "Internt opplegg samt utvikling av eget prosjekt sammen med to kollegaer for å kartlegge fiskeplasser. ",
     },
     {
       period: "August 2022 – Juni 2024",
@@ -36,12 +42,6 @@ function Resume() {
       info: "Sommerjobb som servicetekniker. Arbeidsoppgavene besto av montering, demontering og vedlikehold av hjelpemidler i hjemmebaserte tjenester.",
     },
     {
-      period: "Juni 2022 - August 2022",
-      workplace: "A2G Kompetanse",
-      typeofwork: "Instruktør",
-      info: "Sommerjobb som instruktør hos arbeidsavklaringstiltaket til A2G. Bisto deltakere gjennom forskjellige nettbaserte kurs.",
-    },
-    {
       period: "Juli 2018 – Juli 2020",
       workplace: "Universitetet i Bergen",
       typeofwork: "IKT-lærling",
@@ -49,7 +49,7 @@ function Resume() {
     },
   ];
 
-  const programmingSkills = "Java, Python og SQL";
+  const programmingSkills = "Java, Python, JavaScript, SQL og NoSQL";
 
   return (
     <div className="fremside">

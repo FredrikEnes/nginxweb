@@ -23,9 +23,17 @@ export default function Forside() {
           <br />
           <p>
             Mitt navn er Fredrik Enes. Jeg har studert Dataingeniør på Høgskulen
-            på Vestlandet og har fagbrev i IKT-servicefaget.
+            på Vestlandet og har fagbrev i IKT-servicefaget. For tiden så tar
+            jeg en mastergrad i{" "}
+            <a
+              href="https://www.uib.no/studier/MAMN-PROG"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Software Engineering.
+            </a>
           </p>
-          {/*  <p> Server sier {info.navn} </p> */}
+
           <p> Ta gjerne kontakt via en av logoene under </p>
         </div>
         <Logos />

@@ -4,14 +4,17 @@ export default function About() {
   const hei = "Hei der!";
 
   const tekstommeg =
-    "Jeg er en 23 år gammel gutt fra Bergen. Går på Høgskulen på Vestlandet og er ferdig våren 2024 med bachelor som Dataingeniør. Jeg liker å gjøre spennende ting på datamaskinen min. Fotball er min store lidenskap. Heia Rosenborg BK!";
+    "23 år gammel fra Bergen, født i år 2000. På fritiden er jeg lidenskapelig opptatt av norsk fotball og Rosenborg BK er favorittlaget! ";
 
   return (
     <div className="about">
       <div className="text-box">
-        <h1>{hei}</h1>
         <img className="fremsidebilde" src={RBK} alt="profil" />
         <p> {tekstommeg} </p>
+        <p>
+          Epost:{" "}
+          <a href="mailto:fredrik.enes@gmail.com"> fredrik.enes@gmail.com</a>
+        </p>
       </div>
     </div>
   );

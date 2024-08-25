@@ -1,57 +1,81 @@
 import WEB from "./images/web.png";
-import SpringBoot from "./images/spring-boot-logo.png";
+import Thesis from "./images/thesis.png";
+import { Grid, Typography, Box } from "@mui/material";
 
 function DisplayProjects() {
   const data = [
     {
-      Bilde: WEB,
-      Tittel: "This website",
+      Bilde: Thesis,
+      Tittel: "Bacheloroppgave: Library of Things",
       Beskrivelse:
-        "Denne nettsiden, har brukt React for å lage den, samt min egen css. Tenker senere å koble den opp til en MySQL database. ",
-      Lenke: "https://github.com/h594754/nginxweb",
+        "Bacheloroppgaven som jeg skrev sammen med to medstudenter. Omhandlet å lage en fullstack applikasjon for utlån av utstyr. Applikasjonen skulle være internasjonalisert og benytter krypto lommebok for innlogging. Vant Grasrotprisen under EXPO 2024 hos HVL.",
+      Lenke: "https://hvlopen.brage.unit.no/hvlopen-xmlui/handle/11250/3143193",
     },
-
     {
-      Bilde: SpringBoot,
-      Tittel: "DAT108 oblig",
+      Bilde: WEB,
+      Tittel: "fredrikenes.no",
       Beskrivelse:
-        "En av de obligatoriske innleveringene vi hadde i faget DAT108, her er det brukt database oppkobling, hashing av passord samt visning av informasjon gjennom jstl-biblioteket.",
-      Lenke: "https://github.com/h594754/DAT108_Oblig4",
+        "Denne nettsiden er laget ved hjelp av React som JavaScript-bibliotek samt HTML og CSS for å presentere elementene på siden.",
+      Lenke: "https://github.com/h594754/nginxweb",
     },
   ];
 
-  const showList = data.map((element) => {
-    return (
-      <div className="projectview">
-        <ul>
-          <li>
+  return (
+    <Grid container spacing={4} justifyContent="center">
+      {data.map((element, index) => (
+        <Grid item xs={12} sm={6} md={4} key={index}>
+          <Box
+            className="projectview"
+            sx={{
+              height: "400px", // Set a fixed height for uniformity
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "space-between",
+              alignItems: "center",
+              padding: 3,
+              borderRadius: 2,
+              backgroundColor: "#34495e",
+              transition: "transform 0.3s, box-shadow 0.3s",
+              "&:hover": {
+                transform: "scale(1.05)",
+                boxShadow: "0px 0px 15px rgba(0,0,0,0.3)",
+              },
+            }}
+          >
             <img
               className="prosjektbilde"
               src={element.Bilde}
               alt="prosjektbilde"
-            ></img>
-            <h1>{element.Tittel}</h1>
-            <p>{element.Beskrivelse}</p>
+              style={{ borderRadius: "8px" }}
+            />
+            <Typography
+              variant="h5"
+              component="h1"
+              gutterBottom
+              sx={{ color: "#ecf0f1", marginTop: 2 }}
+            >
+              {element.Tittel}
+            </Typography>
+            <Typography
+              variant="body1"
+              sx={{ color: "#bdc3c7", marginBottom: 2 }}
+            >
+              {element.Beskrivelse}
+            </Typography>
             <a href={element.Lenke} target="_blank" rel="noopener noreferrer">
-              GitHub lenke
+              Lenke
             </a>
-          </li>
-        </ul>
-      </div>
-    );
-  });
-  return <div>{showList}</div>;
+          </Box>
+        </Grid>
+      ))}
+    </Grid>
+  );
 }
 
 export default function Projects() {
-  const more = "More coming eventually.";
-
   return (
     <>
-      <div>
-        <DisplayProjects />
-        <p className="projectview"> {more} </p>
-      </div>
+      <DisplayProjects />
     </>
   );
 }
