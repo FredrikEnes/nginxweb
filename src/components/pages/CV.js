@@ -1,7 +1,4 @@
 import Koffert from "./images/suitcase.png";
-import UiB from "./images/universityofbergen.png";
-import HVL from "./images/hogskolenvl.png";
-import Omega365 from "./images/omega365.png";
 import Java from "./images/Java.png";
 import Python from "./images/python.png";
 import JavaScript from "./images/JavaScript.png";
@@ -18,21 +15,20 @@ function Resume() {
       institution: "Universitetet i Bergen",
       program: "Software Engineering, master",
       info: "Første semesteret tar jeg fag i informasjonssikkerhet, algoritmer og avanserte programvareteknologier. Planlagt oppstart av masteroppgave høst 2025",
-      picture: UiB,
     },
     {
       period: "August 2021 – nå",
       institution: "Høgskulen på Vestlandet",
       program: "Dataingeniør, bachelor",
       info: "Bacheloroppgave: Library of Things. Spesialisering i Programutvikling- og arkitektur. Vinner av Grasrotprisen på HVL EXPO 2024.",
-      picture: HVL,
+    
     },
     {
       period: "Juni 2018 – Juni 2020",
       institution: "Universitet i Bergen",
       program: "IKT-servicefaget , fagbrev",
       info: "To års læretid ved Universitetet i Bergen ble fullført med bestått fagbrev. Hovedfokus lå på brukerstøtte for 4000 ansatte, med vekt på følging av læreplanen som omfattet klient- og serverdrift.",
-      picture: UiB,
+      
     },
   ];
 
@@ -42,28 +38,28 @@ function Resume() {
       workplace: "Omega 365",
       typeofwork: "Summer Intern",
       info: "Internt opplegg samt utvikling av eget prosjekt sammen med to kollegaer for å kartlegge fiskeplasser. ",
-      picture: Omega365,
+      
     },
     {
       period: "August 2022 – Juni 2024",
       workplace: "Høgskulen på Vestlandet",
       typeofwork: "Studentassistent",
       info: "Studentassistent stilling som innebærer å gi brukerstøtte til medstudenter på deres tekniske spørsmål. Studentassistent i faget DAT110 våren 2024 som innebærer å rette obligatoriske innleveringer og å være til hjelp under laboratorieøvelser.",
-      picture: HVL,
+      
     },
     {
       period: "Juni 2023 - Juli 2023",
       workplace: "Bergen Kommune",
       typeofwork: "Servicetekniker",
       info: "Sommerjobb som servicetekniker. Arbeidsoppgavene besto av montering, demontering og vedlikehold av hjelpemidler i hjemmebaserte tjenester.",
-      picture: "",
+      
     },
     {
       period: "Juli 2018 – Juli 2020",
       workplace: "Universitetet i Bergen",
       typeofwork: "IKT-lærling",
       info: "Jeg fikk jobbe på IT-avdelingen til UiB. Lærte masse teknisk og menneskelig gjennom om det å drive brukerstøtte til ansatte på UiB.",
-      picture: UiB,
+      
     },
   ];
 
@@ -126,15 +122,6 @@ function Resume() {
             <Typography variant="h6">
               {`${item.period}: ${item.institution}, ${item.program}`}
             </Typography>
-            {item.picture ? (
-              <img
-                className="imgcompanys"
-                src={item.picture}
-                alt="photoofplace"
-              />
-            ) : (
-              ""
-            )}
             <Typography id="modal-modal-description" sx={{ mt: 2 }}>
               {item?.info || "No additional information available yet"}
             </Typography>
@@ -164,15 +151,6 @@ function Resume() {
               {`${item.period}: ${item.workplace}, ${item.typeofwork}`}
             </Typography>
 
-            {item.picture ? (
-              <img
-                src={`${item.picture}`}
-                className="imgcompanys"
-                alt="photoofplace"
-              />
-            ) : (
-              ""
-            )}
 
             <Typography id="modal-modal-description" sx={{ mt: 2 }}>
               {item?.info || "No additional information available yet"}
