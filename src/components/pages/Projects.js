@@ -1,9 +1,19 @@
 import WEB from "./images/web.png";
 import Thesis from "./images/thesis.png";
+import Fotball from "./images/fotball.png";
 import { Grid, Typography, Box } from "@mui/material";
+import { faFootball } from "@fortawesome/free-solid-svg-icons";
 
 function DisplayProjects() {
   const data = [
+    {
+      Bilde: Fotball,
+      Tittel: "Hvem er spilleren?",
+      Beskrivelse:
+        "Under arbeid! Et spill hvor målet er å gjette den riktige Rosenborg spilleren.",
+      Lenke: "https://github.com/h594754/hvemerspilleren",
+    },
+
     {
       Bilde: Thesis,
       Tittel: "Bacheloroppgave: Library of Things",
@@ -21,19 +31,20 @@ function DisplayProjects() {
   ];
 
   return (
-    <Grid container spacing={4} justifyContent="center">
+    <Grid container spacing={1} justifyContent="center">
       {data.map((element, index) => (
         <Grid item xs={12} sm={6} md={4} key={index}>
           <Box
             className="projectview"
             sx={{
               height: "400px", // Set a fixed height for uniformity
+              maxWidth: "750px", // Set a max width
+              mx: "auto", // Center the box horizontally
               display: "flex",
               flexDirection: "column",
               justifyContent: "space-between",
               alignItems: "center",
-              padding: 3,
-              borderRadius: 2,
+              borderRadius: "10px",
               backgroundColor: "#34495e",
               transition: "transform 0.3s, box-shadow 0.3s",
               "&:hover": {

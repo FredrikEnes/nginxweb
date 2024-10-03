@@ -21,14 +21,20 @@ function Resume() {
       institution: "Høgskulen på Vestlandet",
       program: "Dataingeniør, bachelor",
       info: "Bacheloroppgave: Library of Things. Spesialisering i Programutvikling- og arkitektur. Vinner av Grasrotprisen på HVL EXPO 2024.",
+<<<<<<< Updated upstream
     
+=======
+>>>>>>> Stashed changes
     },
     {
       period: "Juni 2018 – Juni 2020",
       institution: "Universitet i Bergen",
       program: "IKT-servicefaget , fagbrev",
       info: "To års læretid ved Universitetet i Bergen ble fullført med bestått fagbrev. Hovedfokus lå på brukerstøtte for 4000 ansatte, med vekt på følging av læreplanen som omfattet klient- og serverdrift.",
+<<<<<<< Updated upstream
       
+=======
+>>>>>>> Stashed changes
     },
   ];
 
@@ -38,37 +44,49 @@ function Resume() {
       workplace: "Omega 365",
       typeofwork: "Summer Intern",
       info: "Internt opplegg samt utvikling av eget prosjekt sammen med to kollegaer for å kartlegge fiskeplasser. ",
+<<<<<<< Updated upstream
       
+=======
+>>>>>>> Stashed changes
     },
     {
       period: "August 2022 – Juni 2024",
       workplace: "Høgskulen på Vestlandet",
       typeofwork: "Studentassistent",
       info: "Studentassistent stilling som innebærer å gi brukerstøtte til medstudenter på deres tekniske spørsmål. Studentassistent i faget DAT110 våren 2024 som innebærer å rette obligatoriske innleveringer og å være til hjelp under laboratorieøvelser.",
+<<<<<<< Updated upstream
       
+=======
+>>>>>>> Stashed changes
     },
     {
       period: "Juni 2023 - Juli 2023",
       workplace: "Bergen Kommune",
       typeofwork: "Servicetekniker",
       info: "Sommerjobb som servicetekniker. Arbeidsoppgavene besto av montering, demontering og vedlikehold av hjelpemidler i hjemmebaserte tjenester.",
+<<<<<<< Updated upstream
       
+=======
+>>>>>>> Stashed changes
     },
     {
       period: "Juli 2018 – Juli 2020",
       workplace: "Universitetet i Bergen",
       typeofwork: "IKT-lærling",
       info: "Jeg fikk jobbe på IT-avdelingen til UiB. Lærte masse teknisk og menneskelig gjennom om det å drive brukerstøtte til ansatte på UiB.",
+<<<<<<< Updated upstream
       
+=======
+>>>>>>> Stashed changes
     },
   ];
 
   const programmingSkills = [
-    { name: "Java", picture: Java },
-    { name: "Python", picture: Python },
-    { name: "JavaScript", picture: JavaScript },
-    { name: "SQL", picture: "" },
-    { name: "NoSQL", picture: "" },
+    { name: "Java", picture: Java, skills: "Spring Boot, Gradle, Maven" },
+    { name: "Python", picture: Python, skills: "" },
+    { name: "JavaScript", picture: JavaScript, skills: "React.js, Vue.js, Express.js" },
+    { name: "SQL", picture: "", skills: "PostgreSQL, SQL Server" },
+    { name: "NoSQL", picture: "", skills: "Firestore, MongoDB" },
   ];
 
   const handleOpen = (item) => {
@@ -91,16 +109,22 @@ function Resume() {
       <Box className="skill-card-container">
         {programmingSkills.map((item, index) => (
           <Box key={index} className="skill-card">
-            <p>{item.name}</p>
+            <p style={{fontWeight: "bold"}}>{item.name}</p>
             {item.picture ? (
               <img src={item.picture} alt={`logo of ${item.name}`} />
             ) : (
               ""
             )}
+
+            {item.skills ? 
+              <p style={{marginTop: "5px"}}> {item.skills} </p>
+              :
+             ""
+            }
+              
           </Box>
         ))}
       </Box>
-
       <h2 style={{ marginTop: "35px", marginBottom: "8px" }}>Utdanning</h2>
       <ul>
         {educationData.map((item, index) => (

@@ -1,10 +1,8 @@
 import RBK from "./images/rbk.JPG";
 
 export default function About() {
-  const hei = "Hei der!";
-
   const tekstommeg =
-    "23 år gammel fra Bergen, født i år 2000. På fritiden er jeg lidenskapelig opptatt av norsk fotball og Rosenborg BK er favorittlaget! ";
+    "23 år gammel og bor i Bergen. På fritiden er jeg lidenskapelig opptatt av norsk fotball og Rosenborg BK er favorittlaget! ";
 
   return (
     <div className="about">
