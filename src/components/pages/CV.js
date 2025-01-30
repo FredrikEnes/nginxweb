@@ -14,7 +14,7 @@ function Resume() {
       period: "August 2024 – nå",
       institution: "Universitetet i Bergen",
       program: "Software Engineering, master",
-      info: "Første semesteret tar jeg fag i informasjonssikkerhet, algoritmer og avanserte programvareteknologier. Planlagt oppstart av masteroppgave høst 2025",
+      info: "For tiden på andre semester hvor jeg tar kurs i modelldrevet utvikling, moderne systemutviklingsmetoder og programmeringsspråk. Fullført kurs i informasjonssikkerhet, algortimer og moderne systemutvikling. Planlagt oppstart av masteroppgave høst 2025",
     },
     {
       period: "August 2021 – nå",

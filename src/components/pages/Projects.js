@@ -12,7 +12,7 @@ function DisplayProjects() {
       Beskrivelse:
         "Under arbeid! Et spill hvor målet er å gjette den riktige Rosenborg spilleren.",
       Lenke: "https://github.com/h594754/hvemerspilleren",
-      ProvDet: "https://fredrikenes.no/hvemerspilleren/"
+      ProvDet: "https://hvemerspilleren.fredrikenes.no/",
     },
 
     {
@@ -74,8 +74,17 @@ function DisplayProjects() {
             >
               {element.Beskrivelse}
             </Typography>
-            {element.ProvDet ? <a href={element.ProvDet} target="_blank" rel="noopener noreferrer">Prøv spillet!</a>
-            : "" }
+            {element.ProvDet ? (
+              <a
+                href={element.ProvDet}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Prøv spillet!
+              </a>
+            ) : (
+              ""
+            )}
             <a href={element.Lenke} target="_blank" rel="noopener noreferrer">
               Lenke
             </a>
