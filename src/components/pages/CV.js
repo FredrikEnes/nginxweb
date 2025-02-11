@@ -2,12 +2,12 @@ import Koffert from "./images/suitcase.png";
 import Java from "./images/Java.png";
 import Python from "./images/python.png";
 import JavaScript from "./images/JavaScript.png";
-import { Box, Modal, Typography } from "@mui/material";
-import { useState } from "react";
+import Docker from "./images/Docker.png";
+import GithubActions from "./images/githubactions.png"
+import Firebase from "./images/Firebase.png"
+import { Box, Typography } from "@mui/material";
 
 function Resume() {
-  const [open, setOpen] = useState(false);
-  const [selectedItem, setSelectedItem] = useState(null);
 
   const educationData = [
     {
@@ -65,19 +65,13 @@ function Resume() {
       picture: JavaScript,
       skills: "React.js, Vue.js, Express.js",
     },
+    { name: "Docker", picture: Docker, skills: ""},
+    { name: "GitHub Actions", picture: GithubActions, skills: ""},
+    { name: "Firebase", picture: Firebase, skills: ""},
     { name: "SQL", picture: "", skills: "PostgreSQL, SQL Server" },
     { name: "NoSQL", picture: "", skills: "Firestore, MongoDB" },
   ];
 
-  const handleOpen = (item) => {
-    setSelectedItem(item);
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-    setSelectedItem(null);
-  };
 
   return (
     <div className="fremside">
@@ -161,12 +155,7 @@ function Resume() {
         ))}
       </ul>
 
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
+      
         <Box
           sx={{
             p: 4,
@@ -178,7 +167,6 @@ function Resume() {
             borderRadius: "8px", // Optional: Adds some border radius for smoother edges
           }}
         ></Box>
-      </Modal>
     </div>
   );
 }

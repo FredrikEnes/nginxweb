@@ -2,7 +2,6 @@ import WEB from "./images/web.png";
 import Thesis from "./images/thesis.png";
 import Fotball from "./images/fotball.png";
 import { Grid, Typography, Box } from "@mui/material";
-import football from "./images/fotball.png";
 
 function DisplayProjects() {
   const data = [
