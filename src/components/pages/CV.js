@@ -11,49 +11,43 @@ function Resume() {
 
   const educationData = [
     {
-      period: "August 2024 – nå",
-      institution: "Universitetet i Bergen",
+      period: "August 2024 – now",
+      institution: "University of Bergen (UiB)",
       program: "Software Engineering, master",
-      info: "For tiden på andre semester hvor jeg tar kurs i modelldrevet utvikling, moderne systemutviklingsmetoder og programmeringsspråk. Fullført kurs i informasjonssikkerhet, algortimer og moderne systemutvikling. Planlagt oppstart av masteroppgave høst 2025",
+      info: "Currently in my second semester, taking courses in model-driven development, modern system development methods, and programming languages. Completed courses in information security, algorithms, and modern system development. Planned start of master's thesis in fall 2025.",
     },
     {
-      period: "August 2021 – nå",
-      institution: "Høgskulen på Vestlandet",
-      program: "Dataingeniør, bachelor",
-      info: "Bacheloroppgave: Library of Things. Spesialisering i Programutvikling- og arkitektur. Vinner av Grasrotprisen på HVL EXPO 2024.",
+      period: "August 2021 – June 2024",
+      institution: "Western University of Applied Sciences (HVL)",
+      program: "Software Engineering, bachelors",
+      info: "Bachelor thesis: Library of Things. Specialization in Software Development and Architecture. Award winning bachelors project at HVL EXPO 2024.",
     },
     {
-      period: "Juni 2018 – Juni 2020",
-      institution: "Universitet i Bergen",
-      program: "IKT-servicefaget , fagbrev",
-      info: "To års læretid ved Universitetet i Bergen ble fullført med bestått fagbrev. Hovedfokus lå på brukerstøtte for 4000 ansatte, med vekt på følging av læreplanen som omfattet klient- og serverdrift.",
+      period: "June 2018 – June 2020",
+      institution: "Universitet of Bergen",
+      program: "ICT-service, certificate of apprenticeship",
+      info: "Two-years apprenticeship at University of Bergen. Mainly focusing on support towards 4000 employees, meanwhile specializing in client and server management.",
     },
   ];
 
   const workExperience = [
     {
-      period: "Juni 2024 – August 2024",
+      period: "June 2024 – August 2024",
       workplace: "Omega 365",
       typeofwork: "Summer Intern",
-      info: "Internt opplegg samt utvikling av eget prosjekt sammen med to kollegaer for å kartlegge fiskeplasser. ",
+      info: "Summer intern as a System Developer",
     },
     {
-      period: "August 2022 – Juni 2024",
-      workplace: "Høgskulen på Vestlandet",
-      typeofwork: "Studentassistent",
-      info: "Studentassistent stilling som innebærer å gi brukerstøtte til medstudenter på deres tekniske spørsmål. Studentassistent i faget DAT110 våren 2024 som innebærer å rette obligatoriske innleveringer og å være til hjelp under laboratorieøvelser.",
+      period: "August 2022 – June 2024",
+      workplace: "Western University of Applied Sciences (HVL)",
+      typeofwork: "Student assistent",
+      info: "Working with technical support towards students. Student assistant in the course DAT110, Spring 2024.",
     },
     {
-      period: "Juni 2023 - Juli 2023",
-      workplace: "Bergen Kommune",
-      typeofwork: "Servicetekniker",
-      info: "Sommerjobb som servicetekniker. Arbeidsoppgavene besto av montering, demontering og vedlikehold av hjelpemidler i hjemmebaserte tjenester.",
-    },
-    {
-      period: "Juli 2018 – Juli 2020",
+      period: "July 2018 – July 2020",
       workplace: "Universitetet i Bergen",
-      typeofwork: "IKT-lærling",
-      info: "Jeg fikk jobbe på IT-avdelingen til UiB. Lærte masse teknisk og menneskelig gjennom om det å drive brukerstøtte til ansatte på UiB.",
+      typeofwork: "ICT-service apprentice",
+      info: "",
     },
   ];
 
@@ -78,7 +72,7 @@ function Resume() {
       <img className="koffertbilde" src={Koffert} alt="profil" />
 
       <h2 className="arbeid" style={{ marginTop: "0" }}>
-        Programmeringskompetanse
+        Programming skills
       </h2>
       <Box className="skill-card-container">
         {programmingSkills.map((item, index) => (
@@ -98,7 +92,7 @@ function Resume() {
           </Box>
         ))}
       </Box>
-      <h2 style={{ marginTop: "35px", marginBottom: "8px" }}>Utdanning</h2>
+      <h2 style={{ marginTop: "35px", marginBottom: "8px" }}>Education</h2>
       <ul>
         {educationData.map((item, index) => (
           <Box
@@ -120,13 +114,13 @@ function Resume() {
               {`${item.period}: ${item.institution}, ${item.program}`}
             </Typography>
             <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-              {item?.info || "No additional information available yet"}
+              {item?.info || ""}
             </Typography>
           </Box>
         ))}
       </ul>
 
-      <h2 className="arbeid">Arbeidserfaring</h2>
+      <h2 className="arbeid">Work experience</h2>
       <ul>
         {workExperience.map((item, index) => (
           <Box
@@ -149,7 +143,7 @@ function Resume() {
             </Typography>
 
             <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-              {item?.info || "No additional information available yet"}
+              {item?.info || ""}
             </Typography>
           </Box>
         ))}

@@ -2,7 +2,7 @@ import RBK from "./images/rbk.JPG";
 
 export default function About() {
   const tekstommeg =
-    "23 år gammel og bor i Bergen. På fritiden er jeg lidenskapelig opptatt av norsk fotball og Rosenborg BK er favorittlaget! ";
+    "24 year old living in Bergen. Passion for norwegian football and most interested in Rosenborg BK! ";
 
   return (
     <div className="about">
@@ -10,7 +10,7 @@ export default function About() {
         <img className="fremsidebilde" src={RBK} alt="profil" />
         <p> {tekstommeg} </p>
         <p>
-          Epost:{" "}
+          E-mail:{" "}
           <a href="mailto:fredrik.enes@gmail.com"> fredrik.enes@gmail.com</a>
         </p>
       </div>

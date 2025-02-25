@@ -2,29 +2,18 @@ import Logos from "../Logos";
 import Profil from "./images/meg.jpg";
 
 export default function Forside() {
-  //Gjør klart for en database.
-  // const [info, setInfo] = useState("");
-
-  //useEffect(() => {
-  //  fetch("http://localhost:3001/api/data")
-  //    .then((response) => response.json())
-  //    .then((data) => {
-  //      setInfo(data);
-  //    });
-  //}, []);
 
   return (
     <>
       <div>
         <div className="fremside">
-          <h1>Hallo verden</h1>
+          <h1>Hello World!</h1>
           <img className="fremsidebilde" src={Profil} alt="profil" />
           <br />
           <br />
           <p>
-            Mitt navn er Fredrik Enes. Jeg har studert Dataingeniør på Høgskulen
-            på Vestlandet og har fagbrev i IKT-servicefaget. For tiden så tar
-            jeg en mastergrad i{" "}
+            My name is Fredrik Enes. Former Software Engineering graduate from Western University of Applied Sciences. I also obtain a certificate of apprenticeship from University of Bergen. 
+            Currently pursuing a Master's Degree in {" "}
             <a
               href="https://www.uib.no/studier/MAMN-PROG"
               target="_blank"
@@ -34,7 +23,7 @@ export default function Forside() {
             </a>
           </p>
 
-          <p> Ta gjerne kontakt via en av logoene under </p>
+          <p> Please reach out through one of the platforms below </p>
         </div>
         <Logos />
       </div>
