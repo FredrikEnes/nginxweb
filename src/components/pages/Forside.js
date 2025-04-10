@@ -12,15 +12,20 @@ export default function Forside() {
           <br />
           <br />
           <p>
-            My name is Fredrik Enes. Former Software Engineering graduate from Western University of Applied Sciences. I also obtain a certificate of apprenticeship from University of Bergen. 
+            My name is Fredrik Enes. 
+            <br></br>
             Currently pursuing a Master's Degree in {" "}
             <a
               href="https://www.uib.no/studier/MAMN-PROG"
               target="_blank"
               rel="noreferrer"
             >
-              Software Engineering.
-            </a>
+               Software Engineering. 
+            </a> 
+            <br></br>
+             Bachelor of Science in Computer Engineering from Western University of Applied Sciences. 
+             <br></br>
+             I also obtain a certificate of apprenticeship in ICT-service from University of Bergen. 
           </p>
 
           <p> Please reach out through one of the platforms below </p>
