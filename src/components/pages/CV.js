@@ -2,19 +2,16 @@ import Koffert from "./images/suitcase.png";
 import Java from "./images/Java.png";
 import Python from "./images/python.png";
 import JavaScript from "./images/JavaScript.png";
-import { Box, Modal, Typography } from "@mui/material";
-import { useState } from "react";
+import CSHARP from "./images/C.png";
+import { Box, Typography } from "@mui/material";
 
 function Resume() {
-  const [open, setOpen] = useState(false);
-  const [selectedItem, setSelectedItem] = useState(null);
-
   const educationData = [
     {
       period: "August 2024 – nå",
       institution: "Universitetet i Bergen",
       program: "Software Engineering, master",
-      info: "For tiden på andre semester hvor jeg tar kurs i modelldrevet utvikling, moderne systemutviklingsmetoder og programmeringsspråk. Fullført kurs i informasjonssikkerhet, algortimer og moderne systemutvikling. Planlagt oppstart av masteroppgave høst 2025",
+      info: "Skriver for tiden en masteroppgave rundt analyse av studieprogrammer. Fullført kurs i modelldrevet utvikling, informasjonssikkerhet, algoritmer og moderne systemutvikling. Planlagt oppstart av masteroppgave høst 2025",
     },
     {
       period: "August 2021 – nå",
@@ -31,6 +28,12 @@ function Resume() {
   ];
 
   const workExperience = [
+    {
+      period: "Juni 2025 – August 2025",
+      workplace: "Sparebanken Norge",
+      typeofwork: "Summer Intern",
+      info: "Jobbet med C# ASP.NET, React + TypeScript for å utvikle en ny nettbank tilpasset barn. Et tverrfaglig samarbeid mellom 5 utviklere og 2 UX-designere.",
+    },
     {
       period: "Juni 2024 – August 2024",
       workplace: "Omega 365",
@@ -58,26 +61,17 @@ function Resume() {
   ];
 
   const programmingSkills = [
-    { name: "Java", picture: Java, skills: "Spring Boot, Gradle, Maven" },
+    { name: "Java", picture: Java, skills: "Spring Boot" },
+    { name: "C#", picture: CSHARP, skills: "ASP.NET" },
     { name: "Python", picture: Python, skills: "" },
     {
       name: "JavaScript",
       picture: JavaScript,
-      skills: "React.js, Vue.js, Express.js",
+      skills: "React.js, TypeScript, Express",
     },
     { name: "SQL", picture: "", skills: "PostgreSQL, SQL Server" },
     { name: "NoSQL", picture: "", skills: "Firestore, MongoDB" },
   ];
-
-  const handleOpen = (item) => {
-    setSelectedItem(item);
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-    setSelectedItem(null);
-  };
 
   return (
     <div className="fremside">
@@ -114,12 +108,10 @@ function Resume() {
               border: "1px solid #ccc",
               borderRadius: "15px",
               backgroundColor: "#2c3e50",
-              width: "750px",
+              width: { xs: "90%", sm: "750px" }, // Responsive width
               color: "#fff", // To make text visible on dark background
-              margin: "0 auto", // Centers the box horizontally
-              textAlign: "center", // Optional, centers text inside the box
-              marginBottom: "16px",
-              marginTop: "20px",
+              margin: "20px auto", // Centers the box horizontally
+              textAlign: "center", // Centers text inside the box
             }}
           >
             <Typography variant="h6">
@@ -142,12 +134,10 @@ function Resume() {
               border: "1px solid #ccc",
               borderRadius: "15px",
               backgroundColor: "#2c3e50",
-              width: "750px",
+              width: { xs: "90%", sm: "750px" }, // Responsive width
               color: "#fff", // To make text visible on dark background
-              margin: "0 auto", // Centers the box horizontally
-              textAlign: "center", // Optional, centers text inside the box
-              marginBottom: "16px",
-              marginTop: "20px",
+              margin: "20px auto", // Centers the box horizontally
+              textAlign: "center", // Centers text inside the box
             }}
           >
             <Typography variant="h6">
@@ -160,25 +150,6 @@ function Resume() {
           </Box>
         ))}
       </ul>
-
-      <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box
-          sx={{
-            p: 4,
-            backgroundColor: "#2c3e50",
-            maxWidth: 500,
-            margin: "auto",
-            mt: 10,
-            position: "relative", // Allows the button to be positioned absolutely inside this Box
-            borderRadius: "8px", // Optional: Adds some border radius for smoother edges
-          }}
-        ></Box>
-      </Modal>
     </div>
   );
 }
