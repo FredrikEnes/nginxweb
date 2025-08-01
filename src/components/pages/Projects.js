@@ -9,23 +9,23 @@ function DisplayProjects() {
       Bilde: Fotball,
       Tittel: "Hvem er spilleren?",
       Beskrivelse:
-        "Under arbeid! Et spill hvor målet er å gjette den riktige Rosenborg spilleren.",
+        `A norwegian game inspired by "Who Are Ya!". A game where the goal is to guess the correct Rosenborg BK player.`,
       Lenke: "https://github.com/h594754/hvemerspilleren",
       ProvDet: "https://hvemerspilleren.fredrikenes.no/",
     },
 
     {
       Bilde: Thesis,
-      Tittel: "Bacheloroppgave: Library of Things",
+      Tittel: "Bachelors thesis: Library of Things",
       Beskrivelse:
-        "Bacheloroppgaven som jeg skrev sammen med to medstudenter. Omhandlet å lage en fullstack applikasjon for utlån av utstyr. Applikasjonen skulle være internasjonalisert og benytter krypto lommebok for innlogging. Vant Grasrotprisen under EXPO 2024 hos HVL.",
+        `My bachelor thesis written togheter with two other student. Created a full-stack application for lending items. The application is internationalized using "i18-next" and utilizes Lightning Wallets for authentication. Awarded the Grasroots award at HVL EXPO 2024.`,
       Lenke: "https://hvlopen.brage.unit.no/hvlopen-xmlui/handle/11250/3143193",
     },
     {
       Bilde: WEB,
       Tittel: "fredrikenes.no",
       Beskrivelse:
-        "Denne nettsiden er laget ved hjelp av React som JavaScript-bibliotek samt HTML og CSS for å presentere elementene på siden.",
+        "This website is created using React and components from MaterialUI, first hosted via VPS and nginx, now hosted on Vercel.",
       Lenke: "https://github.com/h594754/nginxweb",
     },
   ];
@@ -79,13 +79,13 @@ function DisplayProjects() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Prøv spillet!
+                Try the game!
               </a>
             ) : (
               ""
             )}
             <a href={element.Lenke} target="_blank" rel="noopener noreferrer">
-              Lenke
+              Link
             </a>
           </Box>
         </Grid>
