@@ -416,11 +416,13 @@ a:hover {
   }
 
   .logoer {
+    position: relative; /* Change from fixed to relative */
     display: flex;
-    flex-direction: row; /* Ensure horizontal alignment */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Align items vertically */
+    flex-wrap: wrap; /* Allow icons to wrap on smaller screens */
+    justify-content: center; /* Center the icons horizontally */
+    align-items: center; /* Align the icons vertically */
     padding: 10px;
+    gap: 10px; /* Add spacing between icons */
   }
   
   .ikoner {
