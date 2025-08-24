@@ -35,7 +35,7 @@ function Resume() {
       period: "June 2025 – August 2025",
       workplace: "Sparebanken Norge",
       typeofwork: "Summer Intern",
-      info: "Worked with C# ASP.NET, React + TypeScript to develop a new online banking platform tailored for children. A cross-disciplinary collaboration between 5 developers and 2 UX designers.",
+      info: `Worked with C# ASP.NET, React + TypeScript to develop a new online banking platform tailored for children aged 7 - 14 years old. A cross-disciplinary collaboration between 5 developers and 2 UX designers. Article in norwegian posted about the project <a href="https://www.bankshift.no/nyheter/studentene-fikk-syv-uker-pa-a-skape-en-nettbank-for-barn-et-resultat-som-overgikk-forventingene/415204" target="_blank" rel="noopener noreferrer"> here.</a>`,
     },
     {
       period: "June 2024 – August 2024",
@@ -130,9 +130,11 @@ function Resume() {
                   {`${item.period}: ${item.workplace}, ${item.typeofwork}`}
                 </Typography>
 
-                <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                  {item?.info || ""}
-                </Typography>
+                <Typography
+                  id="modal-modal-description"
+                  sx={{ mt: 2 }}
+                  dangerouslySetInnerHTML={{ __html: item?.info || "" }}
+                />
               </Box>
             ))}
           </ul>
