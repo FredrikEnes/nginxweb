@@ -1,10 +1,17 @@
 import WEB from "./images/web.png";
 import Thesis from "./images/thesis.png";
 import Fotball from "./images/fotball.png";
+import Bank from "./images/bank.png";
 import { Grid, Typography, Box } from "@mui/material";
 
-function DisplayProjects() {
+export default function Projects() {
   const data = [
+    {
+    Bilde: Bank,
+    Tittel: "Piggybank",
+    Beskrivelse: "New banking service for Sparebanken Norge customers aged 7 - 14 years old. The service is built using TypeScript, C# and MongoDB. Guardians can create tasks for children, each with a set amount of money, which children can complete to receive money.",
+    Lenke: "https://www.bankshift.no/nyheter/studentene-fikk-syv-uker-pa-a-skape-en-nettbank-for-barn-et-resultat-som-overgikk-forventingene/415204",
+    },
     {
       Bilde: Fotball,
       Tittel: "Hvem er spilleren?",
@@ -18,7 +25,7 @@ function DisplayProjects() {
       Bilde: Thesis,
       Tittel: "Bachelors thesis: Library of Things",
       Beskrivelse:
-        `My bachelor thesis written togheter with two other student. Created a full-stack application for lending items. The application is internationalized using "i18-next" and utilizes Lightning Wallets for authentication. Awarded the Grasroots award at HVL EXPO 2024.`,
+        `My bachelor thesis written together with two other students. Created a full-stack application for lending items. The application is internationalized using "i18-next" and utilizes Lightning Wallets for authentication. Awarded the Grasroots award at HVL EXPO 2024.`,
       Lenke: "https://hvlopen.brage.unit.no/hvlopen-xmlui/handle/11250/3143193",
     },
     {
@@ -31,6 +38,8 @@ function DisplayProjects() {
   ];
 
   return (
+    <>
+    <h1>Projects</h1>
     <Grid container spacing={1} justifyContent="center">
       {data.map((element, index) => (
         <Grid item xs={12} sm={6} md={4} key={index}>
@@ -91,13 +100,6 @@ function DisplayProjects() {
         </Grid>
       ))}
     </Grid>
-  );
-}
-
-export default function Projects() {
-  return (
-    <>
-      <DisplayProjects />
     </>
   );
 }
