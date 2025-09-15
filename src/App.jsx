@@ -1,9 +1,9 @@
 import "./App.css";
-import Forside from "./components/pages/Forside";
-import About from "./components/pages/About";
-import CV from "./components/pages/CV";
-import Navbar from "./components/Navbar";
-import Projects from "./components/pages/Projects";
+import Forside from "./components/pages/Forside.jsx";
+import About from "./components/pages/About.jsx";
+import CV from "./components/pages/CV.jsx";
+import Navbar from "./components/Navbar.jsx";
+import Projects from "./components/pages/Projects.jsx";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
