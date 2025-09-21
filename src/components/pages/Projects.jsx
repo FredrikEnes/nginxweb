@@ -9,7 +9,7 @@ export default function Projects() {
     {
     Bilde: Bank,
     Tittel: "Piggybank",
-    Beskrivelse: "New banking service for Sparebanken Norge customers aged 7 - 14 years old. The service is built using TypeScript, C# and MongoDB. Guardians can create tasks for children, each with a set amount of money, which children can complete to receive money.",
+    Beskrivelse: "New banking service for Sparebanken Norge customers aged 7–14, built with TypeScript, C# and MongoDB. Guardians assign paid tasks, while kids set saving goals and can interact with their customizable saving buddy. With a clean, intuitive interface, the service makes managing finances simple and engaging for the users.",
     Lenke: "https://www.bankshift.no/nyheter/studentene-fikk-syv-uker-pa-a-skape-en-nettbank-for-barn-et-resultat-som-overgikk-forventingene/415204",
     },
     {
@@ -46,9 +46,9 @@ export default function Projects() {
           <Box
             className="projectview"
             sx={{
-              height: "400px", // Set a fixed height for uniformity
-              maxWidth: "750px", // Set a max width
-              mx: "auto", // Center the box horizontally
+              minHeight: "300px",
+              maxWidth: "750px",
+              mx: "auto",
               display: "flex",
               flexDirection: "column",
               justifyContent: "space-between",
