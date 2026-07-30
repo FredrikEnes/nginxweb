@@ -1,9 +1,9 @@
-import { Link, useMatch, useResolvedPath } from "react-router-dom";
+import { Link, useRoute } from "wouter";
 
 export default function Navbar() {
   return (
     <nav className="nav">
-      {/* <Link to="/" className="site-title">
+      {/* <Link href="/" className="site-title">
         Fredrik
   </Link> */}
       <ul>
@@ -11,13 +11,13 @@ export default function Navbar() {
           <CustomLink to="/">home</CustomLink>
         </li>
         <li>
-          <CustomLink to="/CV">cv</CustomLink>
+          <CustomLink to="/cv">cv</CustomLink>
         </li>
         <li>
-          <CustomLink to="/Projects">projects</CustomLink>
+          <CustomLink to="/projects">projects</CustomLink>
         </li>
         <li>
-          <CustomLink to="/About">about</CustomLink>
+          <CustomLink to="/about">about</CustomLink>
         </li>
       </ul>
     </nav>
@@ -25,13 +25,12 @@ export default function Navbar() {
 }
 
 function CustomLink({ to, children, ...props }) {
-  const resolvedPath = useResolvedPath(to);
-  const isActive = useMatch({ path: resolvedPath.pathname, end: true });
+  const [isActive] = useRoute(to);
 
   return (
     <>
       <li className={isActive ? "active" : ""}>
-        <Link to={to} {...props}>
+        <Link href={to} {...props}>
           {children}
         </Link>
       </li>

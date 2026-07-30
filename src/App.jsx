@@ -4,7 +4,7 @@ import About from "./components/pages/About.jsx";
 import CV from "./components/pages/CV.jsx";
 import Navbar from "./components/Navbar.jsx";
 import Projects from "./components/pages/Projects.jsx";
-import { Route, Routes } from "react-router-dom";
+import { Route, Switch } from "wouter";
 
 function App() {
   return (
@@ -15,12 +15,12 @@ function App() {
         </div>
 
         <div className="container">
-          <Routes>
-            <Route path="/" element={<Forside />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/cv" element={<CV />} />
-            <Route path="/projects" element={<Projects />} />
-          </Routes>
+          <Switch>
+            <Route path="/" component={Forside} />
+            <Route path="/about" component={About} />
+            <Route path="/cv" component={CV} />
+            <Route path="/projects" component={Projects} />
+          </Switch>
         </div>
       </div>
     </>
