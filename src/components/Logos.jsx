@@ -1,6 +1,6 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Logos() {
   return (
@@ -17,13 +17,6 @@ export default function Logos() {
             size="4x"
           ></FontAwesomeIcon>
         </a>
-        {/* <a href="https://twitter.com/EnesFredrik" target="_blank" rel="noopener noreferrer">
-          <FontAwesomeIcon
-            className="ikoner"
-            icon={faTwitter}
-            size="4x"
-          ></FontAwesomeIcon>
-        </a> */}
         <a
           href="https://www.linkedin.com/in/fredrikenes/"
           target="_blank"

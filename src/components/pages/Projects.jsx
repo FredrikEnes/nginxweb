@@ -1,15 +1,14 @@
-import WEB from "./images/web.png";
-import Thesis from "./images/thesis.png";
-import Fotball from "./images/fotball.png";
+import { Box, Grid, Typography } from "@mui/material";
 import Bank from "./images/bank.png";
-import { Grid, Typography, Box } from "@mui/material";
+import Fotball from "./images/fotball.png";
+import Thesis from "./images/thesis.png";
 
 export default function Projects() {
   const data = [
     {
     Bilde: Bank,
     Tittel: "Piggybank",
-    Beskrivelse: "New banking service for Sparebanken Norge customers aged 7–14, built with TypeScript, C# and MongoDB. Guardians assign paid tasks, while kids set saving goals and can interact with their customizable saving buddy. With a clean, intuitive interface, the service makes managing finances simple and engaging for the users.",
+    Beskrivelse: "New banking service for Sparebanken Norge customers aged 7–14, built with TypeScript, C# and MongoDB. Guardians assign paid tasks, while kids set saving goals and can interact with their customizable saving buddy.",
     Lenke: "https://www.bankshift.no/nyheter/studentene-fikk-syv-uker-pa-a-skape-en-nettbank-for-barn-et-resultat-som-overgikk-forventingene/415204",
     },
     {
@@ -17,7 +16,6 @@ export default function Projects() {
       Tittel: "Hvem er spilleren?",
       Beskrivelse:
         `A norwegian game inspired by "Who Are Ya!". A game where the goal is to guess the correct Rosenborg BK player.`,
-      Lenke: "https://github.com/h594754/hvemerspilleren",
       ProvDet: "https://hvemerspilleren.fredrikenes.no/",
     },
 
@@ -27,14 +25,7 @@ export default function Projects() {
       Beskrivelse:
         `My bachelor thesis written together with two other students. Created a full-stack application for lending items. The application is internationalized using "i18-next" and utilizes Lightning Wallets for authentication. Awarded the Grasroots award at HVL EXPO 2024.`,
       Lenke: "https://hvlopen.brage.unit.no/hvlopen-xmlui/handle/11250/3143193",
-    },
-    {
-      Bilde: WEB,
-      Tittel: "fredrikenes.no",
-      Beskrivelse:
-        "This website is created using React and components from MaterialUI, first hosted via VPS and nginx, now hosted on Vercel.",
-      Lenke: "https://github.com/h594754/nginxweb",
-    },
+    }
   ];
 
   return (
@@ -46,7 +37,7 @@ export default function Projects() {
           <Box
             className="projectview"
             sx={{
-              minHeight: "300px",
+              minHeight: "350px",
               maxWidth: "750px",
               mx: "auto",
               display: "flex",
@@ -93,9 +84,17 @@ export default function Projects() {
             ) : (
               ""
             )}
-            <a href={element.Lenke} target="_blank" rel="noopener noreferrer">
-              Link
-            </a>
+            {element.Lenke ? (
+              <a
+                href={element.Lenke}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Link
+              </a>
+            ) : (
+              ""
+            )}
           </Box>
         </Grid>
       ))}

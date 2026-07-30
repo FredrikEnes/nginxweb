@@ -3,9 +3,6 @@ import { Link, useRoute } from "wouter";
 export default function Navbar() {
   return (
     <nav className="nav">
-      {/* <Link href="/" className="site-title">
-        Fredrik
-  </Link> */}
       <ul>
         <li>
           <CustomLink to="/">home</CustomLink>
@@ -15,9 +12,6 @@ export default function Navbar() {
         </li>
         <li>
           <CustomLink to="/projects">projects</CustomLink>
-        </li>
-        <li>
-          <CustomLink to="/about">about</CustomLink>
         </li>
       </ul>
     </nav>

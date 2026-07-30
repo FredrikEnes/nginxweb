@@ -14,16 +14,17 @@ export default function Forside() {
           <p>
             My name is Fredrik Enes. 
             <br></br>
-            Currently pursuing a Master's Degree in {" "}
-            <a
+            Currently working as a software developer at Sparebanken Norge. 
+            <br></br>
+            Masters degree in <a
               href="https://www.uib.no/studier/MAMN-PROG"
               target="_blank"
               rel="noreferrer"
             >
-               Software Engineering. 
-            </a> 
+               Software Engineering 
+            </a>  from University of Bergen and Western Norway University of Applied Sciences.
             <br></br>
-             Bachelor of Science in Computer Engineering from Western University of Applied Sciences. 
+             Bachelor of Science in Computer Engineering from Western Norway University of Applied Sciences. 
              <br></br>
              I also obtain a certificate of apprenticeship in ICT-service from University of Bergen. 
           </p>
