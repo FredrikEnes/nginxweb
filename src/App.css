@@ -11,6 +11,16 @@ html {
 body {
   background-color: #2c3e50;
   color: white;
+  padding-top: 60px;
+}
+
+a {
+  text-decoration: none;
+  color: #e74c3c;
+}
+
+a:hover {
+  color: #c0392b;
 }
 
 .App {
@@ -18,37 +28,7 @@ body {
   margin: 25px;
 }
 
-.koffertbilde {
-  border-radius: 50%;
-  height: 150px;
-  width: auto;
-  margin-top: 30px;
-}
-
-.fremsidebilde {
-  border-radius: 50%;
-  height: 250px;
-  width: auto;
-  margin-top: 30px;
-}
-
-.about {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 100px;
-}
-
-.text-box {
-  word-wrap: break-word;
-  max-width: 500px;
-  text-align: center;
-}
-
-.text-box p {
-  margin-top: 50px;
-}
-
+/* Navigation */
 .nav {
   display: flex;
   gap: 2rem;
@@ -78,7 +58,7 @@ body {
   height: 100%;
   display: flex;
   align-items: center;
-  padding: .25rem;
+  padding: 0.25rem;
 }
 
 .nav li.active {
@@ -86,34 +66,63 @@ body {
   color: #dddddd;
 }
 
-body {
-  padding-top: 60px;
-}
-
-.fremside {
+/* Pages */
+.page {
   text-align: center;
 }
 
-.fremside h1 {
+.page h1 {
   margin-top: 50px;
 }
 
-.fremside h3 {
-  margin-top: 5px;
-  width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.fremside p {
+.page p {
   margin-bottom: 20px;
   width: 500px;
   margin-left: auto;
   margin-right: auto;
 }
 
-.projectview {
-  height: 200px;
+.page ul {
+  list-style-type: none;
+}
+
+.home-image {
+  border-radius: 50%;
+  height: 250px;
+  width: auto;
+  margin-top: 30px;
+}
+
+.cv-image {
+  border-radius: 50%;
+  height: 150px;
+  width: auto;
+  margin-top: 30px;
+}
+
+.section-heading {
+  margin-top: 50px;
+}
+
+/* Info cards (education / experience) */
+.info-card {
+  padding: 16px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  background-color: #2c3e50;
+  width: 750px;
+  max-width: 90%;
+  color: #fff;
+  margin: 20px auto;
+  text-align: center;
+  list-style: none;
+}
+
+/* Projects */
+.project-card {
+  min-height: 350px;
+  max-width: 750px;
+  margin: 50px auto 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -123,17 +132,21 @@ body {
   border-radius: 10px;
   transition: transform 0.3s, box-shadow 0.3s;
   text-align: center;
-  margin-top: 50px;
 }
 
-.projectview img {
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+.project-card img {
   width: auto;
   height: 100px;
   border-radius: 8px;
   margin-bottom: 15px;
 }
 
-.projectview h1 {
+.project-card h1 {
   color: #ecf0f1;
   font-size: 1.25rem;
   margin: 0;
@@ -143,12 +156,12 @@ body {
   max-height: 3em;
 }
 
-.projectview p {
+.project-card p {
   color: #bdc3c7;
   margin: 10px 0;
 }
 
-.projectview a {
+.project-card a {
   color: #e74c3c;
   font-weight: bold;
   text-decoration: none;
@@ -156,30 +169,17 @@ body {
   transition: color 0.3s;
 }
 
-.projectview a:hover {
+.project-card a:hover {
   color: #c0392b;
 }
 
-.projectview:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
-}
-
-a {
-  text-decoration: none;
-  color: #e74c3c;
-}
-
-a:hover {
-  color: #c0392b;
-}
-
-.prosjektbilde {
+.project-image {
   width: 100px;
-  height: auto
+  height: auto;
 }
 
-.logoer {
+/* Social links */
+.social-links {
   position: fixed;
   left: 0;
   right: 0;
@@ -188,107 +188,17 @@ a:hover {
   padding: 10px;
 }
 
-.ikoner {
+.social-links a {
+  color: white;
+}
+
+.social-icon {
   height: 50px;
   width: auto;
   margin: 10px;
 }
 
-.logoer a {
-  color: white;
-}
-
-.fremside ul {
-  list-style-type: none;
-}
-
-.arbeid {
-  margin-top: 50px;
-}
-
-.imgcompanys {
-  height: 150px;
-  width: auto;
-  margin-top: 15px;
-}
-
-.skill-card-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-  max-width: 1000px;
-  margin: 20px auto;
-}
-
-.skill-card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  background-color: #34495e;
-  border-radius: 10px;
-  padding: 15px;
-  width: 200px;
-  height: 170px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.toc {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  background-color: #2c3e50;
-  padding: 10px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-}
-
-.toc a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.2rem;
-  padding: 5px 10px;
-  border-radius: 5px;
-  transition: background-color 0.3s;
-}
-
-.toc a:hover {
-  background-color: #34495e;
-}
-
-#education,
-#work-experience,
-#programming-skills {
-  scroll-margin-top: 80px;
-}
-
-@media (max-width: 900px) {
-  .skill-card-container {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  }
-}
-
-@media (max-width: 600px) {
-  .skill-card-container {
-    grid-template-columns: repeat(1, 1fr);
-  }
-}
-
-.skill-card img {
-  height: 75px;
-  width: auto;
-  margin-top: 20px;
-}
-
-.skill-card p {
-  margin: 0;
-  font-size: 16px;
-  color: #ecf0f1;
-}
-
+/* Responsive */
 @media (max-width: 768px) {
   body {
     padding-top: 50px;
@@ -306,152 +216,64 @@ a:hover {
   }
 
   .nav ul {
-      flex-direction: row;
-      gap: 1rem;
-      margin: 0;
-      margin-left: auto;
-      font-size: 1rem;
+    flex-direction: row;
+    gap: 1rem;
+    margin: 0 10% 0 auto;
+    font-size: 1rem;
   }
 
   .nav a {
-      padding: 0.5rem;
-      font-size: 1.2rem;
+    padding: 0.5rem;
+    font-size: 1.2rem;
   }
 
-  .koffertbilde {
+  .cv-image {
     height: 100px;
     margin-top: 20px;
   }
 
-  .fremsidebilde {
+  .home-image {
     height: 250px;
     margin-top: 20px;
   }
 
-  .about {
-    flex-direction: column;
-    margin-top: 50px;
-  }
-
-  .text-box {
-    max-width: 90%;
-    margin: 0 auto;
-  }
-
-  .nav ul {
-    font-size: 1rem;
-    margin-right: 10%;
-  }
-
-  .fremside h3,
-  .fremside p {
+  .page p {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
   }
 
-  .projectview {
-    height: auto;
+  .project-card {
+    min-height: auto;
     margin-top: 50px;
     padding: 15px;
   }
 
-  .projectview img {
+  .project-card img {
     height: 80px;
   }
 
-  .projectview h1 {
+  .project-card h1 {
     font-size: 1rem;
     max-height: 2em;
   }
 
-  .projectview p {
+  .project-card p {
     font-size: 0.9rem;
   }
 
-  .skill-card-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    grid-auto-rows: 1fr;
-  }
-
-  .skill-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    background-color: #34495e;
-    border-radius: 10px;
-    padding: 15px;
-    width: 100%;
-    height: 100%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-
-  .skill-card img {
-    height: 50px;
-    margin-top: 10px;
-    align-self: center;
-  }
-
-  .skill-card p {
-    margin: 0;
-    font-size: 16px;
-    color: #ecf0f1;
-    text-align: left;
-    margin-top: 10px;
-  }
-
-  .logoer {
+  .social-links {
     position: relative;
-    display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
     gap: 10px;
   }
 
-  .ikoner {
+  .social-icon {
     height: 40px;
-    width: auto;
     margin: 20px;
   }
 
-  .arbeid {
+  .section-heading {
     margin-top: 30px;
-  }
-
-  .imgcompanys {
-    height: 100px;
-    margin-top: 10px;
-  }
-
-  .toc {
-    display: flex;
-    justify-content: space-around;
-    gap: 10px;
-    background-color: #2c3e50;
-    padding: 10px;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    flex-wrap: wrap;
-    margin-top: 20px;
-  }
-
-  .toc a {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-    padding: 10px 15px;
-    border-radius: 5px;
-    text-align: center;
-    transition: background-color 0.3s;
-  }
-
-  .toc a:hover {
-    background-color: #34495e;
   }
 }
