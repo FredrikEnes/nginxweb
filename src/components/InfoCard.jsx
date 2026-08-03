@@ -1,17 +1,22 @@
-import { Box, Typography } from "@mui/material";
+import Card from "./Card.jsx";
 
-export default function InfoCard({ title, description, link }) {
+export default function InfoCard({ period, title, subtitle, description, link }) {
   return (
-    <Box component="li" className="info-card">
-      <Typography variant="h6">{title}</Typography>
-      {description && <Typography sx={{ mt: 2 }}>{description}</Typography>}
+    <Card as="li" interactive className="info-card">
+      {period && <span className="info-card__period">{period}</span>}
+      {title && <h3 className="info-card__title">{title}</h3>}
+      {subtitle && <p className="info-card__subtitle">{subtitle}</p>}
+      {description && <p className="info-card__desc">{description}</p>}
       {link && (
-        <Typography sx={{ mt: 1 }}>
-          <a href={link.url} target="_blank" rel="noopener noreferrer">
-            {link.label}
-          </a>
-        </Typography>
+        <a
+          className="info-card__link"
+          href={link.url}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {link.label}
+        </a>
       )}
-    </Box>
+    </Card>
   );
 }
